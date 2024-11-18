@@ -388,7 +388,7 @@ th:last-child{
 .form-container{
     background: #fff;
     width: 300px;
-    height: 400px;
+    height: 480px;
     position: relative;
     text-align: center;
     padding: 20px 0;
@@ -435,6 +435,14 @@ form .btn:focus{
 }
 #RegForm{
     left: 0;
+}
+.error{
+    margin-top: 40px; 
+    color: #ff523b;
+}
+.success{
+    margin-top: 40px; 
+    color: green;
 }
 form a{
     font-size: 12px;
