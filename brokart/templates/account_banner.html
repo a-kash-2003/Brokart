@@ -14,8 +14,8 @@
                     </div>
                     <form id="LoginForm" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
-                        <input type="text" name="username" placeholder="Username">
-                        <input type="password" name="password" placeholder="Password">
+                        <input type="text" required name="username" placeholder="Username">
+                        <input type="password" required name="password" placeholder="Password">
                         <button type="submit" name="login" class="btn">Login</button>
                         <a href="">Forget Password</a>
                     </form>

@@ -2,23 +2,20 @@
 <div class="small-container single-product">
     <div class="row">
         <div class="col-2">
-            <img src="{{product.image.url}}" width="90%" id="ProductImg">
+            <img src="{{product.image.url}}" width="87%" id="ProductImg">
 
         </div>
         <div class="col-2">
             <h1>{{product.title}}</h1>
-            <h4>{{product.price}}</h4>
-            <select>
-                <option>Select Size</option>
-                <option>XXL</option>
-                <option>XL</option>
-                <option>L</option>
-                <option>M</option>
-                <option>S</option>
-            </select>
-            <input type="number" value="1">
-            <a href="" class="btn">Add To Cart</a>
-
+            <h4> ${{product.price}}</h4>
+            <form class="form-cart" action="{% url 'add_to_cart' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div style="display: flex; align-items: center;"> 
+                    <input type="hidden" name="product_id" value="{{product.id}}">
+                    <input type="number" name="quantity" value="1">
+                    <button type="submit" class="btn" name="">Add To Cart</button>
+                </div>
+            </form>
             <h3>Product Details <i class="fa fa-indent"></i></h3>
             <br>
             <p>{{product.description}}</p>

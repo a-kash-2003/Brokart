@@ -23,8 +23,9 @@ def list_account(request):
                 email=email,
                 password=password
                 )
-            #crstomer account creation
+            #customer account creation
             customer=Customers.objects.create(
+                 name=username,
                 user=user,
                 phone=phone,
                 address=address
